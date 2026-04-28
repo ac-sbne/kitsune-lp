@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>kitsune-lp | Contact</title>
+    <meta name="description" content="kitsune-lp のお問い合わせページです。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html">kitsune-lp</a>
+        <nav class="site-nav" aria-label="メインナビゲーション">
+          <a href="./index.html">Home</a>
+          <a href="./create-item.html">Create Item</a>
+          <a href="./information.html">Information</a>
+          <a class="active" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero">
+        <div class="container">
+          <p class="eyebrow">Contact</p>
+          <h1>お問い合わせ</h1>
+          <p class="lead">
+            Gmailで受信するフォームを想定しています。<br />
+            フォームサービス経由で、Gmail宛にお問い合わせを送信できます。
+          </p>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="form-wrap">
+            <form action="https://formsubmit.co/acsbne.company@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="kitsune-lp Contact" />
+              <input type="hidden" name="_captcha" value="true" />
+              <input type="hidden" name="_next" value="./contact.html?sent=1" />
+
+              <label for="name">お名前</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">メールアドレス</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="message">お問い合わせ内容</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <button class="btn btn-primary" type="submit">送信する</button>
+            </form>
+            <p class="caption">
+              初回送信時に FormSubmit から確認メールが届くので、承認リンクを1回だけ押すと本運用が有効になります。
+            </p>
+            <p class="caption">取得した個人情報はお問い合わせ対応の目的にのみ利用し、目的外利用は行いません。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
