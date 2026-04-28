@@ -160,25 +160,36 @@ ol {
 }
 
 .feature-card {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 18px;
+  display: flex;
+  gap: 16px;
   align-items: center;
+  justify-content: space-between;
+}
+
+.feature-body {
+  flex: 1;
+  min-width: 260px;
 }
 
 .feature-image {
-  width: 100%;
+  width: min(40%, 320px);
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .summary {
   margin-bottom: 14px;
+  font-size: 0.93rem;
 }
 
 .brand-placeholder {
   width: 76px;
   height: 1px;
+}
+
+.compact-grid {
+  max-width: 860px;
 }
 
 .price {
@@ -337,6 +348,12 @@ details ul {
   }
 
   .feature-card {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feature-image {
+    width: 100%;
+    max-width: 100%;
   }
 }
