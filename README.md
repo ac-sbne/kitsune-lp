@@ -1,37 +1,27 @@
-# Kitsune LP (GitHub Pages)
+# kitsune-lp (GitHub Pages)
 
-このフォルダは `GitHub Pages` 公開用のランディングページです。
+4ページ構成のホームページです。
 
-## ファイル構成
+## ページ構成
 
-- `index.html` - LP本体
-- `styles.css` - スタイル
-- `images/` - 画像置き場（要作成）
+- `index.html` - Home（最新販売プロダクト / 最新Note投稿）
+- `create-item.html` - Create Item（各プロジェクトLP一覧）
+- `information.html` - Information（Note投稿一覧）
+- `contact.html` - Contact（Gmail宛お問い合わせ導線）
+- `styles.css` - 共通スタイル
 
-## 画像の配置
+## リンク
 
-`lp-kitsune` 配下に `images` フォルダを作成し、以下の名前で画像を配置してください。
+- note: `https://note.com/ac_sbne`
+- BASE: `https://acsbnec.base.shop/`
 
-- `logo-kitsune.png`
-- `screen-upload.png`
-- `screen-mapping.png`
-- `screen-template-save.png`
-- `screen-preset-load.png`
-- `screen-preview-export.png`
+## Contact運用
 
-### 元画像パス（ローカル）
+- 推奨: Formspree / Google Form 経由でGmail受信
+- 代替: mailto 導線（UXは弱い）
+- 個人情報の利用目的を `contact.html` に明示済み
 
-- `C:\Users\acsbn\.cursor\projects\c-Users-acsbn-Documents-Cursor\assets\c__Users_acsbn_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_Gemini_Generated_Image_3m6kqo3m6kqo3m6k-04b4c2b2-7867-4c69-8baa-9e65173be751.png`
-- `C:\Users\acsbn\.cursor\projects\c-Users-acsbn-Documents-Cursor\assets\c__Users_acsbn_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_1-307b42da-21fe-41d3-a387-3f98a5b74509.png`
-- `C:\Users\acsbn\.cursor\projects\c-Users-acsbn-Documents-Cursor\assets\c__Users_acsbn_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_2-e5bed469-216c-47b9-97d8-95b55516b65c.png`
-- `C:\Users\acsbn\.cursor\projects\c-Users-acsbn-Documents-Cursor\assets\c__Users_acsbn_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_4-63160c84-6ed8-4e3e-9762-df141954ac43.png`
-- `C:\Users\acsbn\.cursor\projects\c-Users-acsbn-Documents-Cursor\assets\c__Users_acsbn_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_5-0e346f1c-3a8e-41cd-807e-be005346d81c.png`
-- `C:\Users\acsbn\.cursor\projects\c-Users-acsbn-Documents-Cursor\assets\c__Users_acsbn_AppData_Roaming_Cursor_User_workspaceStorage_empty-window_images_3-aa1957f7-0095-4f71-94ac-8d208ec79d91.png`
+## 公開URL
 
-## GitHub Pages 公開手順
-
-1. この `lp-kitsune` フォルダをリポジトリにpush
-2. GitHub の `Settings` > `Pages`
-3. `Branch` を選択（例: `main` / `/lp-kitsune` またはルート）
-4. 保存して公開URLを確認
+`https://ac-sbne.github.io/kitsune-lp/`
 

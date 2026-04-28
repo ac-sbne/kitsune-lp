@@ -1,12 +1,12 @@
 :root {
-  --bg: #fffdfd;
-  --bg-alt: #faf6f8;
-  --text: #24242b;
-  --muted: #666377;
+  --bg: #ffffff;
+  --bg-alt: #f8f8f8;
+  --text: #1a1a1f;
+  --muted: #616171;
   --primary: #c14f75;
   --primary-dark: #a23f62;
-  --border: #e8dce1;
-  --max: 940px;
+  --border: #e4e4ea;
+  --max: 980px;
 }
 
 * {
@@ -17,15 +17,63 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
     "Yu Gothic UI", "Yu Gothic", sans-serif;
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--text);
   background: var(--bg);
 }
 
 .container {
-  max-width: var(--max);
+  width: min(100%, var(--max));
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(6px);
+}
+
+.nav-wrap {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  border-color: #d8d8e0;
+  color: var(--text);
+}
+
+.site-nav a.active {
+  border-color: var(--text);
+  color: var(--text);
 }
 
 .section {
@@ -80,6 +128,10 @@ li {
   color: var(--muted);
 }
 
+.lead {
+  font-size: 1.03rem;
+}
+
 ul,
 ol {
   margin-top: 8px;
@@ -104,6 +156,7 @@ ol {
   background: #fff;
   border-radius: 12px;
   padding: 16px;
+  box-shadow: 0 6px 20px rgba(13, 14, 26, 0.04);
 }
 
 .price {
@@ -150,6 +203,65 @@ ol {
   margin-top: 18px;
 }
 
+.meta {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  border-top: 1px solid var(--border);
+}
+
+.list li {
+  border-bottom: 1px solid var(--border);
+}
+
+.list a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 12px 0;
+}
+
+.list a span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.form-wrap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  padding: 18px;
+}
+
+label {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
 figure {
   margin: 20px 0 4px;
 }
@@ -194,5 +306,11 @@ details ul {
 @media (max-width: 640px) {
   .section {
     padding: 46px 0;
+  }
+
+  .nav-wrap {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
   }
 }
