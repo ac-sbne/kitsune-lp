@@ -159,6 +159,28 @@ ol {
   box-shadow: 0 6px 20px rgba(13, 14, 26, 0.04);
 }
 
+.feature-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.feature-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.summary {
+  margin-bottom: 14px;
+}
+
+.brand-placeholder {
+  width: 76px;
+  height: 1px;
+}
+
 .price {
   margin: 0 0 4px;
   font-size: 1.6rem;
@@ -312,5 +334,9 @@ details ul {
     flex-direction: column;
     justify-content: center;
     padding: 10px 0;
+  }
+
+  .feature-card {
+    grid-template-columns: 1fr;
   }
 }
