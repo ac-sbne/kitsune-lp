@@ -6,6 +6,7 @@
     <title>kitsune-lp | Home</title>
     <meta name="description" content="Home: 最新販売プロダクトと最新note投稿を掲載。" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./note-feed.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -51,11 +52,11 @@
           <div class="grid grid-3 compact-grid">
             <article class="card feature-card">
               <div class="feature-body">
-                <h3>新着記事</h3>
-                <p>「#計画3 あの時にあれば(2)」</p>
-                <a class="btn btn-primary" href="https://note.com/ac_sbne/n/n0c7f6ee26bd1" target="_blank" rel="noopener noreferrer">詳しく見る</a>
+                <h3>noteの新着記事</h3>
+                <p id="home-latest-note-title">「#計画3 あの時にあれば(2)」</p>
+                <a id="home-latest-note-link" class="btn btn-primary" href="https://note.com/ac_sbne/n/n0c7f6ee26bd1" target="_blank" rel="noopener noreferrer">詳しく見る</a>
               </div>
-              <img class="feature-image" src="https://assets.st-note.com/production/uploads/images/269517258/rectangle_large_type_2_f4522e973b1eea813cc044dd5edf20a1.png?fit=bounds&quality=85&width=1280" alt="note記事のアイキャッチ画像" />
+              <img id="home-latest-note-image" class="feature-image" src="https://assets.st-note.com/production/uploads/images/269517258/rectangle_large_type_2_f4522e973b1eea813cc044dd5edf20a1.png?fit=bounds&quality=85&width=1280" alt="note記事のアイキャッチ画像" />
             </article>
           </div>
         </div>
