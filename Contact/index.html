@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact</title>
+    <meta name="description" content="Contact: Gmail??????????????" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <span class="brand-placeholder" aria-hidden="true"></span>
+        <nav class="site-nav" aria-label="??????????">
+          <a href="../">Home</a>
+          <a href="../Create%20Item/">Create Item</a>
+          <a href="../Information/">Information</a>
+          <a class="active" href="./">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero">
+        <div class="container">
+          <p class="eyebrow">Contact</p>
+          <h1>??????</h1>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <div class="form-wrap">
+            <form id="contact-form" action="https://formsubmit.co/acsbne.company@gmail.com" method="post">
+              <input type="hidden" name="_subject" value="kitsune-lp Contact" />
+              <input type="hidden" name="_captcha" value="true" />
+              <input type="hidden" name="_template" value="table" />
+              <label for="name">???</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">???????</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="message">????????</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <button class="btn btn-primary" type="submit">????</button>
+            </form>
+            <p id="contact-status" class="note" aria-live="polite"></p>
+            <p class="note">???????????????????????????????????????????????</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const contactForm = document.getElementById("contact-form");
+      const statusText = document.getElementById("contact-status");
+      contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        statusText.textContent = "?????...";
+        const formData = new FormData(contactForm);
+        try {
+          const response = await fetch("https://formsubmit.co/ajax/acsbne.company@gmail.com", {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          });
+          if (!response.ok) throw new Error("send_failed");
+          statusText.textContent = "?????????????????????????";
+          contactForm.reset();
+        } catch (error) {
+          statusText.textContent = "??????????????????????????";
+        }
+      });
+    </script>
+  </body>
+</html>
